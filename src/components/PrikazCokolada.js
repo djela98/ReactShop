@@ -26,7 +26,7 @@ function PrikazCokolada() {
                     <td><img src={`http://localhost:8000/${cokolada.slika}`} width="100px" /></td>
                     <td>{cokolada.cena}</td>
                     <td>
-                        <Link to="izmena-cokolade" className="btn btn-info">Izmeni</Link>
+                        <Link to={`izmena-cokolade/${cokolada.id}`} className="btn btn-info">Izmeni</Link>
                         <button className="btn btn-danger">Obriši</button>
                     </td>
                 </tr>
