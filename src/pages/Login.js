@@ -1,5 +1,6 @@
 import NavMenu from "../components/NavMenu";
 import { useState } from 'react'
+import axios from 'axios'
 
 function Login() {
 
@@ -7,6 +8,29 @@ function Login() {
         username: '',
         password: ''
     });
+
+    function handleLogin() {
+        var uneteVrednosti = {
+            username: vrednosti.username,
+            password: vrednosti.password
+        }
+
+        axios.get('/sanctum/csrf-cookie').then(response => {
+            axios.post(`api/login`, uneteVrednosti).then(res => {
+                if (res.data.status === 200) {
+                    alert(res.data.message)
+                    localStorage.setItem('auth_token', res.data.token);
+                    localStorage.setItem('auth_username', res.data.user);
+                    localStorage.setItem('role', res.data.role);
+                }
+                else {
+                    alert('Pogrešan username ili password')
+                }
+            });
+        });
+    }
+
+
 
     return (
         <div className="login-div">
@@ -22,7 +46,7 @@ function Login() {
                     <input type="password" className="form-control" value={vrednosti.password} onChange={e => setVrednosti({ ...vrednosti, password: e.target.value })} />
                 </div>
 
-                <button type="button" id="btn" className="btn btn-primary mt-3">Login</button>
+                <button type="button" onClick={handleLogin} id="btn" className="btn btn-primary mt-3">Login</button>
             </div>
         </div>
     );

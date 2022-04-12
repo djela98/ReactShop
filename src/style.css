@@ -4,7 +4,6 @@
   display: flex;
   height: 60px;
   padding-top: 10px;
-  padding-left: 790px;
 }
 
 .navmenu-div a {
@@ -42,4 +41,24 @@
 
 #login-naslov{
     margin-left: 225px;
+}
+
+.logout-navmenu{
+  padding-left: 1450px;
+}
+
+#logout-button{
+  width: 180px;
+}
+
+.reg-login {
+  display: flex;
+}
+
+#btn-nova-cokolada{
+  width: 300px;
+  margin-top: 25px;
+  margin-left: 800px;
+  height: 55px;
+  font-size: 22px;
 }

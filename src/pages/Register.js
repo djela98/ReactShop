@@ -1,5 +1,7 @@
 import NavMenu from "../components/NavMenu";
-import { useState } from 'react'
+import { useState } from 'react';
+import axios from 'axios';
+
 
 function Register() {
 
@@ -9,7 +11,24 @@ function Register() {
         password: ''
     });
 
+    function handleRegister() {
+        var uneteVrednosti = {
+            username: vrednosti.username,
+            email: vrednosti.email,
+            password: vrednosti.password
+        }
 
+        axios.get('/sanctum/csrf-cookie').then(response => {
+            axios.post(`api/register`, uneteVrednosti).then(res => {
+                if (res.data.status === 200) {
+                    alert(res.data.message)
+                }
+                else {
+                    alert('Greska')
+                }
+            });
+        });
+    }
 
     return (
         <div className="register-div">
@@ -29,7 +48,7 @@ function Register() {
                     <input type="password" className="form-control" value={vrednosti.password} onChange={e => setVrednosti({ ...vrednosti, password: e.target.value })} />
                 </div>
 
-                <button type="button" id="btn" className="btn btn-primary mt-3">Register</button>
+                <button type="button" onClick={handleRegister} id="btn" className="btn btn-primary mt-3">Register</button>
             </div>
 
 
