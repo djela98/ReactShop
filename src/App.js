@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import NovaCokolada from './components/NovaCokolada';
 import PrikazCokolada from './components/PrikazCokolada';
 import IzmenaCokolade from './components/IzmenaCokolade';
+import Convertor from './pages/Convertor';
 
 axios.defaults.baseURL = "http://localhost:8000/"
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/dodaj-cokoladu" element={<NovaCokolada />} />
           <Route path="/prikazi-cokolade" element={<PrikazCokolada />} />
           <Route path="/dashboard/izmena-cokolade/:id" element={<IzmenaCokolade />} />
+          <Route path="/convertor" element={<Convertor />} />
 
         </Routes>
       </Router >

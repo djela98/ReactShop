@@ -44,7 +44,7 @@
 }
 
 .logout-navmenu{
-  padding-left: 1450px;
+  padding-left: 1330px;
 }
 
 #logout-button{
@@ -73,4 +73,18 @@
   width: 550px;
   margin-top: 50px;
   margin-left: 700px;
+}
+
+.konvertor {
+  width: 450px;
+  font-size: 25px;
+  margin-left: 720px;
+  margin-top: 50px;
+}
+
+#konv-btn {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 110px;
+  font-size: 20px;
 }

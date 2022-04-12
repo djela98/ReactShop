@@ -50,6 +50,8 @@ function NavMenu() {
         <div className="navmenu-div">
             <div className="home-navmenu">
                 <Link className="active" to="/">Home</Link>
+            </div> <div className="convertor-navmenu">
+                <Link className="active" to="/convertor">Convertor</Link>
             </div>
             {adminDashboard}
             {prikazNavMenija}

@@ -14,6 +14,16 @@ function PrikazCokolada() {
         });
     }, []);
 
+    function obrisiCokoladu(cokoladaID) {
+        axios.delete(`api/obrisi-cokoladu/${cokoladaID}`).then(res => {
+            if (res.data.status === 200) {
+                alert(res.data.message);
+            }
+            else {
+                alert('Greska');
+            }
+        });
+    }
 
     var body = '';
     var body =
@@ -27,7 +37,7 @@ function PrikazCokolada() {
                     <td>{cokolada.cena}</td>
                     <td>
                         <Link to={`izmena-cokolade/${cokolada.id}`} className="btn btn-info">Izmeni</Link>
-                        <button className="btn btn-danger">Obriši</button>
+                        <button type="button" className="btn btn-danger" onClick={() => obrisiCokoladu(cokolada.id)}>Obriši</button>
                     </td>
                 </tr>
             )
