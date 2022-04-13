@@ -88,3 +88,82 @@
   margin-left: 110px;
   font-size: 20px;
 }
+
+.homeprikazcokolada-div{
+  width: 1800px;
+}
+
+#btn-korpa{
+  margin-left: 12px;
+}
+
+.cokolada-home-div{
+  margin-top: 100px;
+}
+
+#cena {
+  margin-left: 15px;
+}
+
+#cokolada-naziv{
+  margin-right: -15px;
+}
+
+.cokolade-flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pretraga-div{
+  margin-top: 30px;
+  margin-bottom: -70px;
+  display: flex;
+}
+
+#pretraga-input{
+  margin-top: 20px;
+  margin-left: 340px;
+  margin-right: 20px;
+  width: 250px;
+  height: 38px;
+}
+
+#btn-pretraga{
+  margin-top: 20px;
+  width: 140px;
+  height: 38px;
+}
+
+.pretragaisortiranje-div{
+  display: flex;
+}
+
+#btn-sort{
+  margin-left: 30px;
+  width: 120px;
+}
+
+.sort-div{
+  display:flex;
+  margin-left: 350px;
+  margin-top: 50px;
+}
+
+#lbl-krit{
+  margin-right:5px;
+  padding-top: 5px;
+}
+
+#lbl-pored{
+  margin-left:20px;
+  padding-top: 5px;
+  margin-right: 5px;
+}
+
+#slct-krit{
+  width: 150px;
+}
+
+#slct-pored{
+  width: 150px;
+}
